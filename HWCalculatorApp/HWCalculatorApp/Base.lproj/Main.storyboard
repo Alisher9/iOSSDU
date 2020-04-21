@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HWCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-IY-Yo0">
+                                <rect key="frame" x="10" y="217" width="355" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spx-fo-QV5" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.65098488330841064" green="0.65097230672836304" blue="0.65098077058792114" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="erasePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idF-jf-Slw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig0-pH-sth" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.65098488330000004" green="0.65097230669999995" blue="0.65098077060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="⁺∕-">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXf-n5-mZk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTt-an-XUa" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.65098488330000004" green="0.65097230669999995" blue="0.65098077060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXF-YE-a7X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyR-4L-UKi" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.88688844440000003" green="0.566509068" blue="0.2077184916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <state key="normal" title="÷">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oyb-5P-cad"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="Xzc-GJ-N5w">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="270"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-WB-xxL">
+                                <rect key="frame" x="10" y="577" width="355" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-yl-nM1" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnb-yo-dmm"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PEy-sS-EZY">
+                                        <rect key="frame" x="182.5" y="0.0" width="172.5" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge0-c9-wLb" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="80"/>
+                                                <color key="backgroundColor" red="0.20000159740447998" green="0.19999706745147705" blue="0.2000001072883606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                <state key="normal" title=",">
+                                                    <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqn-Uq-7pj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6h-uV-CFn" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                                <rect key="frame" x="91.5" y="0.0" width="81" height="80"/>
+                                                <color key="backgroundColor" red="0.88688844440000003" green="0.566509068" blue="0.2077184916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQ7-Id-KoD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ica-ww-FqW">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="49"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="355" id="PY2-g2-hk6">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="270"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7to-hZ-eEW">
+                                <rect key="frame" x="10" y="397" width="355" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3z-Ej-8NM" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UYR-Bx-kbP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnU-Gn-slf" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PU-f2-wFs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-EK-PnD" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3Q-3N-gNE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tb-oD-xy4" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.88688844440000003" green="0.566509068" blue="0.2077184916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <state key="normal" title="−">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sK1-qw-lI0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="WF4-Vx-Kdn">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="270"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b0p-9H-yPy">
+                                <rect key="frame" x="10" y="307" width="355" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAJ-s5-SFx" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zId-sY-ZVa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3U-wr-Wow" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTy-2p-9qg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZq-Wo-M4b" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiI-q7-czu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eK-d1-iDt" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.88688844440000003" green="0.566509068" blue="0.2077184916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <state key="normal" title="×">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UR-TD-Td8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="NQ2-aU-HVB">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="270"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CTm-3N-eUI">
+                                <rect key="frame" x="10" y="30" width="355" height="177"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTe-c8-JZ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="177"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="61"/>
+                                        <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rki-xD-Dz9">
+                                <rect key="frame" x="10" y="487" width="355" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn9-5a-rHR" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxm-9V-aQ5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwN-g5-CgO" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAS-gN-9lF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkh-48-zac" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="80"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUv-zG-rOp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94b-oC-K58" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="0.0" width="81" height="80"/>
+                                        <color key="backgroundColor" red="0.88688844440000003" green="0.566509068" blue="0.2077184916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZd-hh-dvb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="g3f-8M-KC6">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="270"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-Ps-rmn">
+                                <rect key="frame" x="10" y="316" width="367" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-ro-bVy" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="WGU-Gz-j5A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Rad">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88I-vR-Cld"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG7-ld-ymx" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="dtt-uf-FhY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="sinh">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Dd-hu-gGP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k37-PD-iud" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="125.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="EsM-If-qUv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="cosh">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="310-MV-Mj8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-3T-4Vi" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="188.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="V6F-Pj-tIi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="tanh">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Tc-8z-qaU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-Nm-L8T" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="251.5" y="0.0" width="52.5" height="48"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="π">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEe-Oo-C0Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YN-p1-4zQ" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="TTv-bW-8ae"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Rand">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldf-39-2r1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="kNF-1s-8FY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kNF-1s-8FY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="top">
+                                    <mask key="constraints">
+                                        <include reference="kNF-1s-8FY"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-V2-PI7">
+                                <rect key="frame" x="10" y="257" width="367" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPt-2J-C5g" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="vpi-28-die"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="x!">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAZ-Ll-Fqr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-QN-zOF" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Cyg-fr-Teg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="sin">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DtR-a0-o4C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-Cf-JJF" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="125.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="1bd-Wh-Owj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="cos">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrH-Yn-kFZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeR-OL-ggw" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="188.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="MBq-7P-TRl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="tan">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aj2-fL-Tdr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVH-v0-VxF" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="251.5" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="qFc-jx-I8U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="e">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMo-JC-KZv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebX-f3-u1E" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="YLx-KK-GrI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="EE">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Tf-XF-bjB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Qvt-Ge-9Xz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qvt-Ge-9Xz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="top">
+                                    <mask key="constraints">
+                                        <include reference="Qvt-Ge-9Xz"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-2V-hvF">
+                                <rect key="frame" x="10" y="198" width="367" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-Cc-1Sm" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="dpG-If-ZxI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="¹∕x">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="an8-qa-XJu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvB-Bf-thn" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="nIT-LC-QXU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="²√x">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEo-PM-ugu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-ZC-Dof" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="125.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="3Y1-x5-9TV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="³√x">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrZ-uU-gjM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-uI-klc" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="188.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="nZd-AU-0Vr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="ʸ√x">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFU-cl-Dtk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rab-tV-Sfg" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="251.5" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="DYV-5O-l8z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="ln">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WeU-3Y-klL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-Ri-yde" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="S4W-Xg-Xbv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="log₁₀">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfF-mE-sjX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="62i-Cv-OA5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="62i-Cv-OA5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="top">
+                                    <mask key="constraints">
+                                        <include reference="62i-Cv-OA5"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qB-k1-InS">
+                                <rect key="frame" x="10" y="139" width="367" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDY-Eb-z3P" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="6Eo-Eq-vPP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="abs">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YaA-af-rVf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEt-mc-S3k" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="TQ6-cq-XyP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="x²">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9MZ-Yg-Cjf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-8z-yTu" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="125.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="tgI-hF-n49"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="x³">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8o-rt-Ybr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-qO-HEW" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="188.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="KaD-Rh-Avb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="xʸ">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Atv-Zd-7A6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q34-gE-yXY" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="251.5" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="kl8-06-edt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="eˣ">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YeQ-V9-oHt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWu-Ua-8Mu" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Xpf-oZ-0to"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="10ˣ">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pi1-67-h6F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="gOX-h8-aAK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gOX-h8-aAK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="top">
+                                    <mask key="constraints">
+                                        <include reference="gOX-h8-aAK"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JTQ-i4-tU3">
+                                <rect key="frame" x="10" y="80" width="367" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rj-mk-O7k" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="67W-z9-mzB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="(">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIg-LC-pyR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBx-cC-jOt" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="agf-Ac-AYk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title=")">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VtV-g7-psQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLC-QY-syA" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="125.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="ZH5-Aa-qcp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="mc">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OoC-kS-Bf1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDv-vc-WSG" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="188.5" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="0Pc-Es-yPK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="m+">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTe-FE-eLI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euS-2Y-zQG" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="251.5" y="0.0" width="52.5" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="mlX-ir-kLQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="m-">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy8-Sp-74f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUK-PF-sHd" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="0.0" width="53" height="49"/>
+                                        <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="z7E-UP-UK1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="mr">
+                                            <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ER-sW-dK3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="x4A-WX-DpC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="x4A-WX-DpC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="top">
+                                    <mask key="constraints">
+                                        <include reference="x4A-WX-DpC"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udg-ai-kw2" customClass="RoundButton" customModule="HWCalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="43" y="180" width="60" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000159740000001" green="0.19999706749999999" blue="0.20000010730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="b0p-9H-yPy" firstAttribute="height" secondItem="nX6-IY-Yo0" secondAttribute="height" id="1Lb-pG-jIV"/>
+                            <constraint firstItem="Xg9-V2-PI7" firstAttribute="height" secondItem="PIC-2V-hvF" secondAttribute="height" id="1YE-fb-0Yt"/>
+                            <constraint firstItem="eFA-Ps-rmn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="1kI-NK-vkH"/>
+                            <constraint firstItem="Zdp-WB-xxL" firstAttribute="top" secondItem="rki-xD-Dz9" secondAttribute="bottom" constant="10" id="27A-12-hvm"/>
+                            <constraint firstItem="Xg9-V2-PI7" firstAttribute="top" secondItem="PIC-2V-hvF" secondAttribute="bottom" constant="10" id="3fz-vF-E4p"/>
+                            <constraint firstItem="1qB-k1-InS" firstAttribute="height" secondItem="JTQ-i4-tU3" secondAttribute="height" id="4Z2-6V-Rtd"/>
+                            <constraint firstItem="Zdp-WB-xxL" firstAttribute="height" secondItem="rki-xD-Dz9" secondAttribute="height" id="5CV-2Y-p7j"/>
+                            <constraint firstItem="JTQ-i4-tU3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BUX-R8-dPg"/>
+                            <constraint firstItem="PIC-2V-hvF" firstAttribute="top" secondItem="1qB-k1-InS" secondAttribute="bottom" constant="10" id="EG6-6J-whS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zdp-WB-xxL" secondAttribute="bottom" constant="10" id="G4g-Tp-bDe"/>
+                            <constraint firstItem="nX6-IY-Yo0" firstAttribute="leading" secondItem="1qB-k1-InS" secondAttribute="trailing" constant="10" id="Jj2-eJ-v3Q"/>
+                            <constraint firstItem="CTm-3N-eUI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Kg5-EH-5UP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFA-Ps-rmn" secondAttribute="bottom" constant="10" id="QIp-vi-2cJ"/>
+                            <constraint firstItem="eFA-Ps-rmn" firstAttribute="top" secondItem="Xg9-V2-PI7" secondAttribute="bottom" constant="10" id="REh-nQ-9Gv"/>
+                            <constraint firstItem="1qB-k1-InS" firstAttribute="top" secondItem="JTQ-i4-tU3" secondAttribute="bottom" constant="10" id="Rf6-eT-xZL"/>
+                            <constraint firstItem="b0p-9H-yPy" firstAttribute="top" secondItem="nX6-IY-Yo0" secondAttribute="bottom" constant="10" id="UuR-mF-cn4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nX6-IY-Yo0" secondAttribute="trailing" constant="10" id="bIh-y6-Lu8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zdp-WB-xxL" secondAttribute="trailing" constant="10" id="bn0-HT-1NY"/>
+                            <constraint firstItem="1qB-k1-InS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="d7r-rq-NVv"/>
+                            <constraint firstItem="CTm-3N-eUI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="eIN-xy-WWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rki-xD-Dz9" secondAttribute="trailing" constant="10" id="erC-ZB-EhK"/>
+                            <constraint firstItem="rki-xD-Dz9" firstAttribute="top" secondItem="7to-hZ-eEW" secondAttribute="bottom" constant="10" id="gk3-yo-AWB"/>
+                            <constraint firstItem="eFA-Ps-rmn" firstAttribute="height" secondItem="Xg9-V2-PI7" secondAttribute="height" id="goO-lh-JAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7to-hZ-eEW" secondAttribute="trailing" constant="10" id="h5c-M7-ejj"/>
+                            <constraint firstItem="PIC-2V-hvF" firstAttribute="height" secondItem="1qB-k1-InS" secondAttribute="height" id="hJp-yc-tfa"/>
+                            <constraint firstItem="7to-hZ-eEW" firstAttribute="leading" secondItem="PIC-2V-hvF" secondAttribute="trailing" constant="10" id="hcu-5I-tpI"/>
+                            <constraint firstItem="7to-hZ-eEW" firstAttribute="top" secondItem="b0p-9H-yPy" secondAttribute="bottom" constant="10" id="iVX-Mb-JhE"/>
+                            <constraint firstItem="PIC-2V-hvF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ne0-pM-De7"/>
+                            <constraint firstItem="7to-hZ-eEW" firstAttribute="height" secondItem="b0p-9H-yPy" secondAttribute="height" id="o69-C4-MfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b0p-9H-yPy" secondAttribute="trailing" constant="10" id="oNO-xM-dHl"/>
+                            <constraint firstItem="Xg9-V2-PI7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pt5-72-Xjc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CTm-3N-eUI" secondAttribute="trailing" constant="10" id="qbR-vr-0lj"/>
+                            <constraint firstItem="nX6-IY-Yo0" firstAttribute="top" secondItem="CTm-3N-eUI" secondAttribute="bottom" constant="10" id="qss-eC-zl7"/>
+                            <constraint firstItem="nX6-IY-Yo0" firstAttribute="leading" secondItem="JTQ-i4-tU3" secondAttribute="trailing" constant="10" id="vPH-mP-5G1"/>
+                            <constraint firstItem="rki-xD-Dz9" firstAttribute="leading" secondItem="Xg9-V2-PI7" secondAttribute="trailing" constant="10" id="vjb-F3-CtA"/>
+                            <constraint firstItem="Zdp-WB-xxL" firstAttribute="leading" secondItem="eFA-Ps-rmn" secondAttribute="trailing" constant="10" id="yBs-a2-dOa"/>
+                            <constraint firstItem="rki-xD-Dz9" firstAttribute="height" secondItem="7to-hZ-eEW" secondAttribute="height" id="yde-fu-D4O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eFA-Ps-rmn"/>
+                                <exclude reference="Xg9-V2-PI7"/>
+                                <exclude reference="PIC-2V-hvF"/>
+                                <exclude reference="1qB-k1-InS"/>
+                                <exclude reference="JTQ-i4-tU3"/>
+                                <exclude reference="Udg-ai-kw2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BUX-R8-dPg"/>
+                                <exclude reference="Rf6-eT-xZL"/>
+                                <exclude reference="d7r-rq-NVv"/>
+                                <exclude reference="EG6-6J-whS"/>
+                                <exclude reference="ne0-pM-De7"/>
+                                <exclude reference="3fz-vF-E4p"/>
+                                <exclude reference="pt5-72-Xjc"/>
+                                <exclude reference="1kI-NK-vkH"/>
+                                <exclude reference="REh-nQ-9Gv"/>
+                                <exclude reference="QIp-vi-2cJ"/>
+                                <exclude reference="Jj2-eJ-v3Q"/>
+                                <exclude reference="vPH-mP-5G1"/>
+                                <exclude reference="hcu-5I-tpI"/>
+                                <exclude reference="vjb-F3-CtA"/>
+                                <exclude reference="yBs-a2-dOa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eFA-Ps-rmn"/>
+                                <include reference="Xg9-V2-PI7"/>
+                                <include reference="PIC-2V-hvF"/>
+                                <include reference="1qB-k1-InS"/>
+                                <include reference="JTQ-i4-tU3"/>
+                                <exclude reference="Udg-ai-kw2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BUX-R8-dPg"/>
+                                <include reference="Rf6-eT-xZL"/>
+                                <include reference="d7r-rq-NVv"/>
+                                <include reference="EG6-6J-whS"/>
+                                <include reference="ne0-pM-De7"/>
+                                <include reference="3fz-vF-E4p"/>
+                                <include reference="pt5-72-Xjc"/>
+                                <include reference="1kI-NK-vkH"/>
+                                <include reference="REh-nQ-9Gv"/>
+                                <include reference="QIp-vi-2cJ"/>
+                                <include reference="Jj2-eJ-v3Q"/>
+                                <include reference="vPH-mP-5G1"/>
+                                <include reference="hcu-5I-tpI"/>
+                                <include reference="vjb-F3-CtA"/>
+                                <include reference="yBs-a2-dOa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myDisplay" destination="xTe-c8-JZ4" id="VRJ-gf-Bht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
