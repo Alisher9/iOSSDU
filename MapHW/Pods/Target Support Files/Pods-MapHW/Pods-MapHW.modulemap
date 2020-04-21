@@ -1,0 +1,6 @@
+framework module Pods_MapHW {
+  umbrella header "Pods-MapHW-umbrella.h"
+
+  export *
+  module * { export * }
+}
